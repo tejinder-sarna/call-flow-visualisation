@@ -1,0 +1,31 @@
+.flow_diagram {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flow_chart {
+  height: 100vh;
+  width: 70vw;
+}
+
+.configuration_form {
+  width: 30vw;
+  height: 100vh;
+  background-color: #fbfbfb;
+}
+
+@media (max-width: 860px) {
+  .flow_diagram {
+    flex-direction: column;
+  }
+  .flow_chart {
+    height: 60vh;
+    width: 100vw;
+  }
+  .configuration_form {
+    width: 100vw;
+    height: 40vh;
+  }
+}

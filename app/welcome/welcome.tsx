@@ -8,6 +8,7 @@ import {
 } from "@xyflow/react";
 import { useState } from "react";
 import palette from "~/constants/palette";
+import "./welcome.css";
 
 type dataProp = {
   label: string;
@@ -65,15 +66,8 @@ export function Welcome() {
   const { nodes, edges } = config.nodesAndEdges;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      <div style={{ height: "100vh", width: "70vw" }}>
+    <div className="flow_diagram">
+      <div className="flow_chart">
         <ReactFlow
           nodes={nodes}
           nodesConnectable={false}
@@ -85,13 +79,7 @@ export function Welcome() {
           <Controls />
         </ReactFlow>
       </div>
-      <div
-        style={{
-          width: "30vw",
-          height: "100vh",
-          backgroundColor: palette.grey_bg,
-        }}
-      >
+      <div className="configuration_form">
         <ConfigurationForm
           configuration={config}
           setConfiguration={(data) => {
